@@ -7,7 +7,7 @@
 static int pen_probe(struct usb_interface *interface, const struct usb_device_id *id)
 {
 
-    printk(KERN_INFO "Pen drive (%04X:%04X) plugged AAAAAAAAAAAAAAAAAAAAAAAAA\n", id->idVendor, id->idProduct);
+    printk(KERN_INFO "Pen drive (%04X:%04X) plugged\n", id->idVendor, id->idProduct);
     return 0;
 }
 
@@ -15,7 +15,7 @@ static int pen_probe(struct usb_interface *interface, const struct usb_device_id
 static void pen_disconnect(struct usb_interface *interface)
 {
 
-    printk(KERN_INFO "Pen drive removed AAAAAAAAAAAAAAAAAAAAAAAAA\n");
+    printk(KERN_INFO "Pen drive removed\n");
 }
 
  
